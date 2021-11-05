@@ -1,6 +1,6 @@
 //Menna & Youmna
 import 'package:flutter/material.dart';
-import 'package:calendar_module/main.dart';
+
 
 class SlotTile extends StatefulWidget {
   const SlotTile({Key? key}) : super(key: key);
@@ -10,27 +10,27 @@ class SlotTile extends StatefulWidget {
 }
 
 class _SlotTileState extends State<SlotTile> {
-  List<String> patients = ["yomna"];
+  List<String> patients = [];
 
   void addPatient() {
     patients.add("patient");
     setState(() {
-      
+
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: 150,
       height: 100,
       child: patients.isEmpty
           ? Center(
-              child: IconButton(
-                onPressed: addPatient,
-                icon: const Icon(
+              child: InkWell(
+                onTap: addPatient,
+                child:  Icon(
                   Icons.add_circle_rounded,
-                  color: Colors.pink,
+                  color: Colors.pink[900],
                   size: 50,
                 ),
               ),

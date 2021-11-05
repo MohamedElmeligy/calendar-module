@@ -1,4 +1,5 @@
 //Marawan & Tarek
+import 'package:calendar_module/screens/calendar/components/slot_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 
@@ -54,10 +55,10 @@ class _CalendarScreenState extends State<CalendarScreen> {
                       itemBuilder: (_, index) {
                         return Container(
                           child: Center(
-                            child: Text('$thisDay ${((index + 8) % 12) + 1}'),
+                            child: SlotTile(),
+                            // '$thisDay ${((index + 8) % 12) + 1}'
                           ),
-                          width: 75,
-                          height: 75,
+                          
                         );
                       },
                     );
